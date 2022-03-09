@@ -16,6 +16,8 @@ import com.sumaya.hw_week06_day05.R
 
 class MainActivity : AppCompatActivity() {
 
+
+
     private lateinit var moviesRV : RecyclerView
     private val vm by lazy {
         ViewModelProvider(this).get(MainVM::class.java)
@@ -30,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         moviesRV = findViewById(R.id.rvMovies)
         moviesRV.layoutManager = StaggeredGridLayoutManager(2 ,1 )
         sharedPreferences = this.getSharedPreferences("moviesSearchSharePreferences", Context.MODE_PRIVATE)
-
+// Bundle
 
         loadMovies()
     }
